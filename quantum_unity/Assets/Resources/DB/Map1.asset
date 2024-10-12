@@ -20,9 +20,9 @@ MonoBehaviour:
     UserAsset:
       Id:
         Value: 0
-    Scene: Game
-    ScenePath: Assets/Photon/QuantumDemo/Game/Game.unity
-    SceneGuid: 03bd5ba32b9950244a08f22579187d8b
+    Scene: Main
+    ScenePath: Assets/Scenes/Main.unity
+    SceneGuid: 41ab375259786df48a8caa294bd831d0
     WorldSize: 256
     BucketsCount: 16
     BucketsSubdivisions: 8
@@ -41,6 +41,47 @@ MonoBehaviour:
     NavMeshLinks: []
     Regions: []
     StaticColliders2D: []
-    StaticColliders3D: []
+    StaticColliders3D:
+    - Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+      Position:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 199229
+      PhysicsMaterial:
+        Id:
+          Value: 0
+      ShapeType: 2
+      SphereRadius:
+        RawValue: 0
+      BoxExtents:
+        X:
+          RawValue: 1638400
+        Y:
+          RawValue: 32768
+        Z:
+          RawValue: 1638400
+      SmoothSphereMeshCollisions: 0
+      StaticData:
+        Name: Floor
+        Tag: Untagged
+        Layer: 0
+        Asset:
+          Id:
+            Value: 0
+        IsTrigger: 0
+        ColliderIndex: 0
+        MutableMode: 0
+      MutableMode: 0
     MapEntities: []
   Prototypes: []
