@@ -6,14 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Photon/QuantumDemo/Menu/Menu.unity
-    guid: cc502d8c93eb40943b652c72000036d6
+    path: Assets/Scenes/Menu.unity
+    guid: 56491530249e24e45bff278caa4fd80f
   - enabled: 1
-    path: Assets/Photon/QuantumDemo/Menu/MenuAuto.unity
-    guid: 45efb823fdbe27d4490138c728a24ba8
-  - enabled: 1
-    path: Assets/Photon/QuantumDemo/Game/Game.unity
-    guid: 03bd5ba32b9950244a08f22579187d8b
+    path: Assets/Scenes/Main.unity
+    guid: 41ab375259786df48a8caa294bd831d0
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 8012c229df5d8f84683449de40029a6b,
       type: 2}
