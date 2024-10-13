@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Quantum.Game;
 using Quantum.Systems;
 
 namespace Quantum {
@@ -23,6 +24,7 @@ namespace Quantum {
         new Core.PlayerConnectedSystem(),
 
         // user systems go here 
+        new PlayerSpawnSystem(),
         new MoveCharacterSystem(),
       };
     }
