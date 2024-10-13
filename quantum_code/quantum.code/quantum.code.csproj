@@ -85,9 +85,13 @@
     <Compile Include="SimulationConfig.User.cs" />
     <Compile Include="SystemSetup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Systems\MoveCharacterSystem.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="db.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Input.qtn" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
