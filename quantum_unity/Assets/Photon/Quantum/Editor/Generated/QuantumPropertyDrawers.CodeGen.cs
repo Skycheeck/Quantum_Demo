@@ -15,6 +15,20 @@ namespace Quantum.Editor {
     }
   }
 
+  [CustomPropertyDrawer(typeof(AssetRefEnemiesCollection))]
+  public class AssetRefEnemiesCollectionPropertyDrawer : PropertyDrawer {
+    public override void OnGUI(Rect position, SerializedProperty property, GUIContent label) {
+      AssetRefDrawer.DrawAssetRefSelector(position, property, label, typeof(EnemiesCollectionAsset));
+    }
+  }
+
+  [CustomPropertyDrawer(typeof(AssetRefEnemySpec))]
+  public class AssetRefEnemySpecPropertyDrawer : PropertyDrawer {
+    public override void OnGUI(Rect position, SerializedProperty property, GUIContent label) {
+      AssetRefDrawer.DrawAssetRefSelector(position, property, label, typeof(EnemySpecAsset));
+    }
+  }
+
   [CustomPropertyDrawer(typeof(Quantum.Prototypes.InputButtons_Prototype))]
   partial class PrototypeDrawer {}
 }

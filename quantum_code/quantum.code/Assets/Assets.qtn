@@ -1,1 +1,3 @@
 asset CharacterSpec;
+asset EnemySpec;
+asset EnemiesCollection;

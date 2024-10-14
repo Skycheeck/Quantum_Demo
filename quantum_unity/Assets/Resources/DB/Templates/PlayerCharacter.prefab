@@ -290,7 +290,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 947c833119b5bd1459bda1c266c521c4, type: 2}
+  - {fileID: 2100000, guid: 33634a8feb088164785fe229823daa78, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -326,7 +326,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Settings:
     Identifier:
-      Path: Resources/DB/PlayerCharacter|EntityView
+      Path: Resources/DB/Templates/PlayerCharacter|EntityView
       Guid:
         Value: 281504990206836214
   Parent: {fileID: 3424903267360202509}
@@ -344,7 +344,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Settings:
     Identifier:
-      Path: Resources/DB/PlayerCharacter|EntityPrototype
+      Path: Resources/DB/Templates/PlayerCharacter|EntityPrototype
       Guid:
         Value: 3020494797289217663
   Parent: {fileID: 3424903267360202511}

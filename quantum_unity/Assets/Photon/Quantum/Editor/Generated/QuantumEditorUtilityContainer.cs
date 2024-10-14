@@ -32,6 +32,8 @@ namespace Quantum.Editor {
       public Quantum.CharacterController2DConfig[] CharacterController2DConfig = {};
       public Quantum.CharacterController3DConfig[] CharacterController3DConfig = {};
       public Quantum.CharacterSpec[] CharacterSpec = {};
+      public Quantum.EnemiesCollection[] EnemiesCollection = {};
+      public Quantum.EnemySpec[] EnemySpec = {};
       public Quantum.EntityPrototype[] EntityPrototype = {};
       public Quantum.EntityView[] EntityView = {};
       public Quantum.Map[] Map = {};

@@ -41,26 +41,71 @@ MonoBehaviour:
         Id:
           Value: 5
       ResourcePath: DB/Configs/SimulationConfig
-    - Path: Resources/DB/PlayerCharacter|EntityView
+    - Path: Resources/DB/Templates/PlayerCharacter|EntityView
       AssetRef:
         Id:
           Value: 281504990206836214
-      ResourcePath: DB/PlayerCharacter
+      ResourcePath: DB/Templates/PlayerCharacter
+    - Path: Resources/DB/Templates/Enemy_Green|EntityView
+      AssetRef:
+        Id:
+          Value: 320896142473215694
+      ResourcePath: DB/Templates/Enemy_Green
+    - Path: Resources/DB/Templates/Enemy_base|EntityView
+      AssetRef:
+        Id:
+          Value: 634215152650983960
+      ResourcePath: DB/Templates/Enemy_base
     - Path: Resources/DB/PlayerCharacterConfig
       AssetRef:
         Id:
           Value: 1089839244462582965
       ResourcePath: DB/PlayerCharacterConfig
+    - Path: Resources/DB/Templates/Enemy_base|EntityPrototype
+      AssetRef:
+        Id:
+          Value: 1183286507714471316
+      ResourcePath: DB/Templates/Enemy_base
+    - Path: Resources/DB/Templates/Enemy_Yellow|EntityView
+      AssetRef:
+        Id:
+          Value: 1617418201790518383
+      ResourcePath: DB/Templates/Enemy_Yellow
+    - Path: Resources/DB/Templates/Enemy_Red|EntityView
+      AssetRef:
+        Id:
+          Value: 1692787092981628674
+      ResourcePath: DB/Templates/Enemy_Red
     - Path: Resources/DB/Map1
       AssetRef:
         Id:
           Value: 1710471675203725834
       ResourcePath: DB/Map1
-    - Path: Resources/DB/PlayerCharacter|EntityPrototype
+    - Path: Resources/DB/Templates/Enemy_Red|EntityPrototype
+      AssetRef:
+        Id:
+          Value: 2003397302685193874
+      ResourcePath: DB/Templates/Enemy_Red
+    - Path: Resources/DB/EnemiesCollection
+      AssetRef:
+        Id:
+          Value: 2716117886275884547
+      ResourcePath: DB/EnemiesCollection
+    - Path: Resources/DB/Templates/Enemy_Yellow|EntityPrototype
+      AssetRef:
+        Id:
+          Value: 2782635065946016091
+      ResourcePath: DB/Templates/Enemy_Yellow
+    - Path: Resources/DB/Templates/Enemy_Green|EntityPrototype
+      AssetRef:
+        Id:
+          Value: 3002805500848097075
+      ResourcePath: DB/Templates/Enemy_Green
+    - Path: Resources/DB/Templates/PlayerCharacter|EntityPrototype
       AssetRef:
         Id:
           Value: 3020494797289217663
-      ResourcePath: DB/PlayerCharacter
+      ResourcePath: DB/Templates/PlayerCharacter
     - Path: Resources/DB/Map1_mesh
       AssetRef:
         Id:
