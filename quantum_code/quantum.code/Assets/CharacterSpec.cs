@@ -8,4 +8,5 @@ public partial class CharacterSpec
     public FP Speed;
     public FP DPS;
     public FP AttackRadius;
+    public LayerMask AttackMask;
 }

@@ -17,7 +17,7 @@
 
             frame.Add(entity, new PlayerLink {Player = player});
             frame.Add(entity, new Speed {Value = _characterSpec.Speed});
-            frame.Add(entity, new Attacker() {DPS = _characterSpec.DPS, Radius = _characterSpec.AttackRadius});
+            frame.Add(entity, new Attacker() {DPS = _characterSpec.DPS, Radius = _characterSpec.AttackRadius, Mask = _characterSpec.AttackMask});
 
             // Offset the instantiated object in the world, based on its ID.
             if (frame.Unsafe.TryGetPointer<Transform3D>(entity, out var transform))

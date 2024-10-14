@@ -26,3 +26,5 @@ MonoBehaviour:
       RawValue: 655360
     AttackRadius:
       RawValue: 131072
+    AttackMask:
+      BitMask: 8

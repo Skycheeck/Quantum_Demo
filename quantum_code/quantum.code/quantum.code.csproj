@@ -88,6 +88,7 @@
     <Compile Include="SimulationConfig.User.cs" />
     <Compile Include="SystemSetup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Systems\AttackSystem.cs" />
     <Compile Include="Systems\EnemySpawnSystem.cs" />
     <Compile Include="Systems\MoveCharacterSystem.cs" />
     <Compile Include="Systems\PlayerSpawnsystem.cs" />
@@ -98,6 +99,7 @@
   <ItemGroup>
     <Content Include="Assets\Assets.qtn" />
     <Content Include="Components\Attacker.qtn" />
+    <Content Include="Components\Dead.qtn" />
     <Content Include="Components\Health.qtn" />
     <Content Include="Components\PlayerLink.qtn" />
     <Content Include="Components\Speed.qtn" />
