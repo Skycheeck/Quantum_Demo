@@ -66,6 +66,11 @@ MonoBehaviour:
         Id:
           Value: 1183286507714471316
       ResourcePath: DB/Templates/Enemy_base
+    - Path: Resources/DB/EnemiesSpawnConfig
+      AssetRef:
+        Id:
+          Value: 1554493117389658458
+      ResourcePath: DB/EnemiesSpawnConfig
     - Path: Resources/DB/Templates/Enemy_Yellow|EntityView
       AssetRef:
         Id:
@@ -86,11 +91,6 @@ MonoBehaviour:
         Id:
           Value: 2003397302685193874
       ResourcePath: DB/Templates/Enemy_Red
-    - Path: Resources/DB/EnemiesCollection
-      AssetRef:
-        Id:
-          Value: 2716117886275884547
-      ResourcePath: DB/EnemiesCollection
     - Path: Resources/DB/Templates/Enemy_Yellow|EntityPrototype
       AssetRef:
         Id:

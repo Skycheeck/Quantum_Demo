@@ -15,10 +15,10 @@ namespace Quantum.Editor {
     }
   }
 
-  [CustomPropertyDrawer(typeof(AssetRefEnemiesCollection))]
-  public class AssetRefEnemiesCollectionPropertyDrawer : PropertyDrawer {
+  [CustomPropertyDrawer(typeof(AssetRefEnemiesSpawnConfig))]
+  public class AssetRefEnemiesSpawnConfigPropertyDrawer : PropertyDrawer {
     public override void OnGUI(Rect position, SerializedProperty property, GUIContent label) {
-      AssetRefDrawer.DrawAssetRefSelector(position, property, label, typeof(EnemiesCollectionAsset));
+      AssetRefDrawer.DrawAssetRefSelector(position, property, label, typeof(EnemiesSpawnConfigAsset));
     }
   }
 

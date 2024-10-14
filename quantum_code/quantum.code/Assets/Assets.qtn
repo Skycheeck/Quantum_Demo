@@ -1,3 +1,3 @@
 asset CharacterSpec;
 asset EnemySpec;
-asset EnemiesCollection;
+asset EnemiesSpawnConfig;

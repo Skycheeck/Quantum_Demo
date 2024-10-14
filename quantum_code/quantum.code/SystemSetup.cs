@@ -18,6 +18,7 @@ namespace Quantum {
         new Core.PlayerConnectedSystem(),
 
         // user systems go here 
+        new EnemySpawnSystem(),
         new PlayerSpawnSystem(),
         new MoveCharacterSystem(),
       };
