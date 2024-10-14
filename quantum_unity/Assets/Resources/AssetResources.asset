@@ -46,6 +46,11 @@ MonoBehaviour:
         Id:
           Value: 281504990206836214
       ResourcePath: DB/PlayerCharacter
+    - Path: Resources/DB/PlayerCharacterConfig
+      AssetRef:
+        Id:
+          Value: 1089839244462582965
+      ResourcePath: DB/PlayerCharacterConfig
     - Path: Resources/DB/Map1
       AssetRef:
         Id:

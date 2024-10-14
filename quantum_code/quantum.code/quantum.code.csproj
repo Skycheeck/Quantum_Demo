@@ -74,6 +74,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\CharacterSpec.cs" />
     <Compile Include="CommandSetup.User.cs" />
     <Compile Include="Core\CodeGen.cs" />
     <Compile Include="CommandSetup.Legacy.cs" />
@@ -92,7 +93,10 @@
     <EmbeddedResource Include="db.json" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Assets.qtn" />
+    <Content Include="Components\Attacker.qtn" />
     <Content Include="Components\PlayerLink.qtn" />
+    <Content Include="Components\Speed.qtn" />
     <Content Include="Input.qtn" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

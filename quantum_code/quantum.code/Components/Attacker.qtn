@@ -1,0 +1,5 @@
+component Attacker
+{
+    FP DPS;
+    FP Radius;
+}

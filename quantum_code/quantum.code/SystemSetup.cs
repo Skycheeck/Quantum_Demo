@@ -1,10 +1,4 @@
-﻿using Photon.Deterministic;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Quantum.Game;
-using Quantum.Systems;
+﻿using Quantum.Systems;
 
 namespace Quantum {
   public static class SystemSetup {

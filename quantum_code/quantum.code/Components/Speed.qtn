@@ -1,0 +1,4 @@
+component Speed
+{
+    FP Value;
+}
