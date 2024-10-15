@@ -16,8 +16,24 @@ public unsafe class PlayerProgressionSystem : SystemMainThread
     {
         for (int i = 0; i < f.PlayerCount; i++)
         {
-            UpgradePlayerCommand command = f.GetPlayerCommand(i) as UpgradePlayerCommand;
-            command?.Execute(f, _playerCharacterProgression, f.GetPlayerData(i).CharacterRef);
+            if (f.GetPlayerCommand(i) is not UpgradePlayerCommand command) continue;
+            RuntimePlayer runtimePlayer = f.GetPlayerData(i);
+            
+            command.Execute(f, _playerCharacterProgression, runtimePlayer);
+            bool syncResult = SyncModelToEntity(f, runtimePlayer.CharacterRef, runtimePlayer.PlayerModel.PlayerCharacterStats);
+            if (!syncResult) Log.Error($"Failed to sync upgrade changes for player {i}!");
         }
+    }
+
+    private static bool SyncModelToEntity(Frame f, EntityRef entityRef, PlayerCharacterStats playerCharacterStats)
+    {
+        if (!f.Unsafe.TryGetPointer(entityRef, out Speed* speed)) return false;
+        if (!f.Unsafe.TryGetPointer(entityRef, out Attacker* attacker)) return false;
+
+        speed->Value = playerCharacterStats.Speed;
+        attacker->DPS = playerCharacterStats.DPS;
+        attacker->Radius = playerCharacterStats.AttackRadius;
+        
+        return true;
     }
 }

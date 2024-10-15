@@ -20,11 +20,12 @@ MonoBehaviour:
     CharacterPrototype:
       Id:
         Value: 3020494797289217663
-    Speed:
-      RawValue: 65536
-    DPS:
-      RawValue: 655360
-    AttackRadius:
-      RawValue: 131072
+    PlayerCharacterStats:
+      Speed:
+        RawValue: 65536
+      DPS:
+        RawValue: 655360
+      AttackRadius:
+        RawValue: 131072
     AttackMask:
       BitMask: 8

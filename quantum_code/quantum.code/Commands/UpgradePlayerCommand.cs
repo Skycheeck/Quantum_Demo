@@ -12,7 +12,7 @@ public class UpgradePlayerCommand : DeterministicCommand
         
     }
 
-    public void Execute(Frame f, PlayerCharacterProgression progression, EntityRef entityRef)
+    public void Execute(Frame f, PlayerCharacterProgression progression, RuntimePlayer runtimePlayer)
     {
         ChanceUpgradePair[] pairs =
         [
@@ -24,8 +24,7 @@ public class UpgradePlayerCommand : DeterministicCommand
         int index = GetRandomIndex(f, pairs.Select(x => x.Chance).ToArray());
 
         IUpgrade upgrade = pairs[index].Upgrade;
-        bool upgradeResult = upgrade.Upgrade(f, entityRef);
-        if (!upgradeResult) Log.Error($"Failed to upgrade! {upgrade.GetType().FullName}");
+        upgrade.Upgrade(runtimePlayer);
     }
 
     private unsafe int GetRandomIndex(Frame f, IReadOnlyList<FP> chances)

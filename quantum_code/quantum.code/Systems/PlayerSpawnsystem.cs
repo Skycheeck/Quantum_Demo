@@ -16,16 +16,27 @@
             var entity = frame.Create(_characterSpec.CharacterPrototype);
 
             frame.Add(entity, new PlayerLink {Player = player});
-            frame.Add(entity, new Speed {Value = _characterSpec.Speed});
-            frame.Add(entity, new Attacker() {DPS = _characterSpec.DPS, Radius = _characterSpec.AttackRadius, Mask = _characterSpec.AttackMask});
+            frame.Add(entity, new Speed {Value = _characterSpec.PlayerCharacterStats.Speed});
+            frame.Add(entity, new Attacker
+            {
+                DPS = _characterSpec.PlayerCharacterStats.DPS,
+                Radius = _characterSpec.PlayerCharacterStats.AttackRadius,
+                Mask = _characterSpec.AttackMask
+            });
 
             // Offset the instantiated object in the world, based on its ID.
-            if (frame.Unsafe.TryGetPointer<Transform3D>(entity, out var transform))
+            if (frame.Unsafe.TryGetPointer(entity, out Transform3D* transform))
             {
                 transform->Position.X = (int)player;
             }
 
-            frame.GetPlayerData(player).CharacterRef = entity;
+            RuntimePlayer runtimePlayer = frame.GetPlayerData(player);
+            runtimePlayer.CharacterRef = entity;
+            runtimePlayer.PlayerModel = new PlayerModel
+            {
+                EnemiesKilled = 0,
+                PlayerCharacterStats = _characterSpec.PlayerCharacterStats
+            };
         }
     }
 }

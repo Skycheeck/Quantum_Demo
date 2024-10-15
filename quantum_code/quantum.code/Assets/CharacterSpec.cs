@@ -1,12 +1,8 @@
-﻿using Photon.Deterministic;
-
-namespace Quantum;
+﻿namespace Quantum;
 
 public partial class CharacterSpec
 {
     public AssetRefEntityPrototype CharacterPrototype;
-    public FP Speed;
-    public FP DPS;
-    public FP AttackRadius;
+    public PlayerCharacterStats PlayerCharacterStats;
     public LayerMask AttackMask;
 }

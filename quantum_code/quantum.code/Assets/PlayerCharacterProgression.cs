@@ -18,35 +18,29 @@ public partial class PlayerCharacterProgression
 
 public interface IUpgrade
 {
-    bool Upgrade(Frame f, EntityRef entityRef);
+    void Upgrade(RuntimePlayer runtimePlayer);
 }
 
 public class SpeedUpgrade(FP step) : IUpgrade
 {
-    public unsafe bool Upgrade(Frame f, EntityRef entityRef)
+    public void Upgrade(RuntimePlayer runtimePlayer)
     {
-        if (!f.Unsafe.TryGetPointer(entityRef, out Speed* speed)) return false;
-        speed->Value += step;
-        return true;
+        runtimePlayer.PlayerModel.PlayerCharacterStats.Speed += step;
     }
 }
 
 public class DPSUpgrade(FP step) : IUpgrade
 {
-    public unsafe bool Upgrade(Frame f, EntityRef entityRef)
+    public void Upgrade(RuntimePlayer runtimePlayer)
     {
-        if (!f.Unsafe.TryGetPointer(entityRef, out Attacker* attacker)) return false;
-        attacker->DPS += step;
-        return true;
+        runtimePlayer.PlayerModel.PlayerCharacterStats.DPS += step;
     }
 }
 
 public class AttackRadiusUpgrade(FP step) : IUpgrade
 {
-    public unsafe bool Upgrade(Frame f, EntityRef entityRef)
+    public void Upgrade(RuntimePlayer runtimePlayer)
     {
-        if (!f.Unsafe.TryGetPointer(entityRef, out Attacker* attacker)) return false;
-        attacker->Radius += step;
-        return true;
+        runtimePlayer.PlayerModel.PlayerCharacterStats.Speed += step;
     }
 }

@@ -83,6 +83,8 @@
     <Compile Include="Core\CodeGen.cs" />
     <Compile Include="CommandSetup.Legacy.cs" />
     <Compile Include="Core\Core.cs" />
+    <Compile Include="Data\PlayerCharacterStats.cs" />
+    <Compile Include="Data\PlayerModel.cs" />
     <Compile Include="Frame.User.cs" />
     <Compile Include="FrameContext.User.cs" />
     <Compile Include="RuntimeConfig.User.cs" />
