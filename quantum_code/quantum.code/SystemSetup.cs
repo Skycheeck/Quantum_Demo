@@ -22,6 +22,7 @@ namespace Quantum {
         new PlayerSpawnSystem(),
         new MoveCharacterSystem(),
         new AttackSystem(),
+        new DeathSystem(),
       };
     }
   }

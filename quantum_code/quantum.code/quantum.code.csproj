@@ -89,6 +89,7 @@
     <Compile Include="SystemSetup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Systems\AttackSystem.cs" />
+    <Compile Include="Systems\DeathSystem.cs" />
     <Compile Include="Systems\EnemySpawnSystem.cs" />
     <Compile Include="Systems\MoveCharacterSystem.cs" />
     <Compile Include="Systems\PlayerSpawnsystem.cs" />
