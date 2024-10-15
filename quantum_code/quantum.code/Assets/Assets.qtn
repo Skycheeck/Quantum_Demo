@@ -1,3 +1,4 @@
 asset CharacterSpec;
 asset EnemySpec;
 asset EnemiesSpawnConfig;
+asset PlayerCharacterProgression;

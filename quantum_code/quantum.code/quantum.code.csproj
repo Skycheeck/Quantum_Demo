@@ -77,7 +77,9 @@
     <Compile Include="Assets\CharacterSpec.cs" />
     <Compile Include="Assets\EnemiesSpawnConfig.cs" />
     <Compile Include="Assets\EnemySpec.cs" />
+    <Compile Include="Assets\PlayerCharacterProgression.cs" />
     <Compile Include="CommandSetup.User.cs" />
+    <Compile Include="Commands\UpgradePlayerCommand.cs" />
     <Compile Include="Core\CodeGen.cs" />
     <Compile Include="CommandSetup.Legacy.cs" />
     <Compile Include="Core\Core.cs" />
@@ -92,6 +94,7 @@
     <Compile Include="Systems\DeathSystem.cs" />
     <Compile Include="Systems\EnemySpawnSystem.cs" />
     <Compile Include="Systems\MoveCharacterSystem.cs" />
+    <Compile Include="Systems\PlayerProgressionSystem.cs" />
     <Compile Include="Systems\PlayerSpawnsystem.cs" />
   </ItemGroup>
   <ItemGroup>

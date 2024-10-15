@@ -24,6 +24,8 @@
             {
                 transform->Position.X = (int)player;
             }
+
+            frame.GetPlayerData(player).CharacterRef = entity;
         }
     }
 }

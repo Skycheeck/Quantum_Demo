@@ -4,11 +4,11 @@ namespace Quantum
 {
   partial class RuntimePlayer
   {
-    public AssetRefEntityPrototype CharacterPrototype;
+    public EntityRef CharacterRef;
 
     partial void SerializeUserData(BitStream stream)
     {
-      stream.Serialize(ref CharacterPrototype);
+      stream.Serialize(ref CharacterRef);
     }
   }
 }

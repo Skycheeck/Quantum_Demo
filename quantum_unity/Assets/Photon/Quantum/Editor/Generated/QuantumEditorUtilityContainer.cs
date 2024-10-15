@@ -40,6 +40,7 @@ namespace Quantum.Editor {
       public Quantum.NavMesh[] NavMesh = {};
       public Quantum.NavMeshAgentConfig[] NavMeshAgentConfig = {};
       public Quantum.PhysicsMaterial[] PhysicsMaterial = {};
+      public Quantum.PlayerCharacterProgression[] PlayerCharacterProgression = {};
       public Quantum.PolygonCollider[] PolygonCollider = {};
       public Quantum.SimulationConfig[] SimulationConfig = {};
       public Quantum.TerrainCollider[] TerrainCollider = {};

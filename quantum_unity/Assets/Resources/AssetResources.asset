@@ -41,6 +41,11 @@ MonoBehaviour:
         Id:
           Value: 5
       ResourcePath: DB/Configs/SimulationConfig
+    - Path: Resources/DB/PlayerCharacterProgressionConfig
+      AssetRef:
+        Id:
+          Value: 212229545220656486
+      ResourcePath: DB/PlayerCharacterProgressionConfig
     - Path: Resources/DB/Templates/PlayerCharacter|EntityView
       AssetRef:
         Id:
