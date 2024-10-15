@@ -10,7 +10,7 @@ public unsafe class EnemySpawnSystem : SystemMainThreadFilter<EnemySpawnSystem.F
     public struct Filter
     {
         public EntityRef Entity;
-        public Health* Health;
+        public Dead* Dead;
     }
 
     public override void OnInit(Frame f)
@@ -21,14 +21,20 @@ public unsafe class EnemySpawnSystem : SystemMainThreadFilter<EnemySpawnSystem.F
 
         for (int i = 0; i < _enemiesSpawnConfig.InitialCount; i++)
         {
-            EnemySpec enemySpec = _enemiesSpawnConfig.Enemies[f.Global->RngSession.Next(0, _enemiesSpawnConfig.Enemies.Length)];
+            EnemySpec enemySpec = GetRandomEnemySpec(f);
             SpawnEnemy(f, enemySpec.EnemyPrototype, enemySpec.Health, GetPosition(f, _enemiesSpawnConfig));
         }
     }
 
     public override void Update(Frame f, ref Filter filter)
     {
-        
+        EnemySpec enemySpec = GetRandomEnemySpec(f);
+        SpawnEnemy(f, enemySpec.EnemyPrototype, enemySpec.Health, GetPosition(f, _enemiesSpawnConfig));
+    }
+
+    private EnemySpec GetRandomEnemySpec(Frame f)
+    {
+        return _enemiesSpawnConfig.Enemies[f.Global->RngSession.Next(0, _enemiesSpawnConfig.Enemies.Length)];
     }
 
     private static void SpawnEnemy(Frame f, AssetRefEntityPrototype entityPrototype, FP health, FPVector3 position)
