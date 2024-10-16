@@ -41,6 +41,6 @@ public class AttackRadiusUpgrade(FP step) : IUpgrade
 {
     public void Upgrade(RuntimePlayer runtimePlayer)
     {
-        runtimePlayer.PlayerModel.PlayerCharacterStats.Speed += step;
+        runtimePlayer.PlayerModel.PlayerCharacterStats.AttackRadius += step;
     }
 }
