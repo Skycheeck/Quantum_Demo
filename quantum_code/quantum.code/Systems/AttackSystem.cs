@@ -14,10 +14,16 @@ public unsafe class AttackSystem : SystemMainThreadFilter<AttackSystem.Filter>
         public Attacker* Attacker;
     }
 
-    public override void OnInit(Frame f)
+    public override void OnEnabled(Frame f)
     {
-        base.OnInit(f);
+        base.OnEnabled(f);
         _persistentHitCollection3D = f.Physics3D.AllocatePersistentHitCollection3D(3);
+    }
+
+    public override void OnDisabled(Frame f)
+    {
+        base.OnDisabled(f);
+        f.Physics3D.FreePersistentHitCollection3D(_persistentHitCollection3D);
     }
 
     public override void Update(Frame f, ref Filter filter)
@@ -32,11 +38,11 @@ public unsafe class AttackSystem : SystemMainThreadFilter<AttackSystem.Filter>
 
             if (!f.Unsafe.TryGetPointer(entityRef, out Health* health)) continue;
             health->Current -= filter.Attacker->DPS * f.DeltaTime;
-            
+
             if (health->Current > FP._0) continue;
             f.Add<Dead>(entityRef);
         }
-        
+
         _persistentHitCollection3D->Reset();
     }
 }
