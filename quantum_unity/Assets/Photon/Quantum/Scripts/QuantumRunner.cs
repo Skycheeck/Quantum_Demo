@@ -232,6 +232,10 @@ public sealed class QuantumRunner : MonoBehaviour, IDisposable {
   public static QuantumRunner StartGame(String clientId, StartParameters param) {
     Log.Info("Starting Game");
 
+    var seed = UnityEngine.Random.Range(int.MinValue, int.MaxValue);
+    param.RuntimeConfig.Seed = seed;
+    Debug.Log($"Seed was randomized. Seed: {seed}");
+
     // set a default runner id if none is given
     if (param.RunnerId == null) {
       param.RunnerId = "DEFAULT";
