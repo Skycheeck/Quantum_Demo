@@ -98,6 +98,7 @@
     <Compile Include="Systems\MoveCharacterSystem.cs" />
     <Compile Include="Systems\PlayerProgressionSystem.cs" />
     <Compile Include="Systems\PlayerSpawnsystem.cs" />
+    <Compile Include="Systems\RespawnEnemySystem.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="db.json" />
@@ -111,6 +112,7 @@
     <Content Include="Components\Speed.qtn" />
     <Content Include="Events\PlayerModelUpdatedEvent.qtn" />
     <Content Include="Input.qtn" />
+    <Content Include="signals.qtn" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

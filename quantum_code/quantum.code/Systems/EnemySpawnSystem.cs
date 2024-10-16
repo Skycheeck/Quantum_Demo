@@ -1,17 +1,11 @@
-using System.Linq;
 using Photon.Deterministic;
 
 namespace Quantum;
 
-public unsafe class EnemySpawnSystem : SystemMainThreadFilter<EnemySpawnSystem.Filter>
+public unsafe class EnemySpawnSystem : SystemSignalsOnly, ISignalSpawnEnemies
 {
     private EnemiesSpawnConfig _enemiesSpawnConfig;
 
-    public struct Filter
-    {
-        public EntityRef Entity;
-        public Dead* Dead;
-    }
 
     public override void OnInit(Frame f)
     {
@@ -26,10 +20,13 @@ public unsafe class EnemySpawnSystem : SystemMainThreadFilter<EnemySpawnSystem.F
         }
     }
 
-    public override void Update(Frame f, ref Filter filter)
+    public void SpawnEnemies(Frame f, int count)
     {
-        EnemySpec enemySpec = GetRandomEnemySpec(f);
-        SpawnEnemy(f, enemySpec.EnemyPrototype, enemySpec.Health, GetPosition(f, _enemiesSpawnConfig));
+        for (int i = 0; i < count; i++)
+        {
+            EnemySpec enemySpec = GetRandomEnemySpec(f);
+            SpawnEnemy(f, enemySpec.EnemyPrototype, enemySpec.Health, GetPosition(f, _enemiesSpawnConfig));
+        }
     }
 
     private EnemySpec GetRandomEnemySpec(Frame f)

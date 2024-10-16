@@ -19,9 +19,12 @@ namespace Quantum {
 
         // user systems go here 
         new PlayerSpawnSystem(),
+        new EnemySpawnSystem(),
+        
         new MoveCharacterSystem(),
         new AttackSystem(),
-        new EnemySpawnSystem(),
+        
+        new RespawnEnemySystem(),
         new DeathSystem(),
         new PlayerProgressionSystem(),
       };
