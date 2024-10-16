@@ -37,6 +37,8 @@
                 EnemiesKilled = 0,
                 PlayerCharacterStats = _characterSpec.PlayerCharacterStats
             };
+            
+            frame.Events.PlayerModelUpdatedEvent(runtimePlayer.PlayerModel);
         }
     }
 }
