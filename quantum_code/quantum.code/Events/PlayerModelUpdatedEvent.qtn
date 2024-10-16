@@ -1,4 +1,5 @@
 event PlayerModelUpdatedEvent
 {
+    local player_ref Player;
     PlayerModel Model;
 }

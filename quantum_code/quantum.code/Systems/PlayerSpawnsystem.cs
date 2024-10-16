@@ -38,7 +38,7 @@
                 PlayerCharacterStats = _characterSpec.PlayerCharacterStats
             };
             
-            frame.Events.PlayerModelUpdatedEvent(runtimePlayer.PlayerModel);
+            frame.Events.PlayerModelUpdatedEvent(player, runtimePlayer.PlayerModel);
         }
     }
 }

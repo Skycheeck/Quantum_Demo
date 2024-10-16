@@ -26,7 +26,10 @@ public class HUDPresenter : MonoBehaviour
         _upgradeButtonClickedObservable = _upgradeButton.onClick.AsObservable();
     }
 
-    private void Start() => QuantumEvent.Subscribe(this, (EventPlayerModelUpdatedEvent e) => _playerModelUpdatedObservable.OnNext(e.Model));
+    private void Start() => QuantumEvent.Subscribe(this, (EventPlayerModelUpdatedEvent e) =>
+    {
+        _playerModelUpdatedObservable.OnNext(e.Model);
+    });
     private void OnDestroy() => QuantumEvent.UnsubscribeListener(this);
 
     private void OnEnable()

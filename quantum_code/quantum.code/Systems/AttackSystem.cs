@@ -49,7 +49,7 @@ public unsafe class AttackSystem : SystemMainThreadFilter<AttackSystem.Filter>
             // update kill counter and send event to view
             RuntimePlayer runtimePlayer = f.GetPlayerData(filter.PlayerLink->Player);
             runtimePlayer.PlayerModel.EnemiesKilled++;
-            f.Events.PlayerModelUpdatedEvent(runtimePlayer.PlayerModel);
+            f.Events.PlayerModelUpdatedEvent(filter.PlayerLink->Player, runtimePlayer.PlayerModel);
         }
 
         _persistentHitCollection3D->Reset();
