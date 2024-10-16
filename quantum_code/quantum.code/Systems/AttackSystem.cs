@@ -37,19 +37,8 @@ public unsafe class AttackSystem : SystemMainThreadFilter<AttackSystem.Filter>
         for (int i = 0; i < _persistentHitCollection3D->Count; i++)
         {
             EntityRef entityRef = _persistentHitCollection3D->HitsBuffer[i].Entity;
-            if (!f.Unsafe.TryGetPointer(entityRef, out Health* health)) continue; // skip if no health
-            if (f.Has<Dead>(entityRef) || health->Current <= FP._0) continue; // skip if dead
-
             FP damage = filter.Attacker->DPS * f.DeltaTime;
-            health->Current -= damage; // do damage
-
-            if (health->Current > FP._0) continue; // skip if damage is not enough to kill
-            f.Add<Dead>(entityRef); // add dead
-
-            // update kill counter and send event to view
-            RuntimePlayer runtimePlayer = f.GetPlayerData(filter.PlayerLink->Player);
-            runtimePlayer.PlayerModel.EnemiesKilled++;
-            f.Events.PlayerModelUpdatedEvent(filter.PlayerLink->Player, runtimePlayer.PlayerModel);
+            f.Signals.TakeDamage(entityRef, damage, filter.PlayerLink->Player);
         }
 
         _persistentHitCollection3D->Reset();

@@ -24,6 +24,7 @@ namespace Quantum {
         new MoveCharacterSystem(),
         new AttackSystem(),
         
+        new TakeDamageSystem(),
         new RespawnEnemySystem(),
         new DeathSystem(),
         new PlayerProgressionSystem(),

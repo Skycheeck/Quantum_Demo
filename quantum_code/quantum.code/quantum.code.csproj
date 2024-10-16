@@ -99,6 +99,7 @@
     <Compile Include="Systems\PlayerProgressionSystem.cs" />
     <Compile Include="Systems\PlayerSpawnsystem.cs" />
     <Compile Include="Systems\RespawnEnemySystem.cs" />
+    <Compile Include="Systems\TakeDamageSystem.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="db.json" />

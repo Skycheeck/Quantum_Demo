@@ -1,1 +1,2 @@
 signal SpawnEnemies(int count);
+signal TakeDamage(EntityRef entity, FP damage, PlayerRef source);
