@@ -14,4 +14,6 @@ public struct PlayerModel
         PlayerCharacterStats.Serialize(stream);
         stream.Serialize(ref EnemiesKilled);
     }
+
+    public override string ToString() => $"{nameof(PlayerCharacterStats)} : {PlayerCharacterStats}, {nameof(EnemiesKilled)} : {EnemiesKilled}";
 }

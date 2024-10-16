@@ -16,4 +16,6 @@ public struct PlayerCharacterStats
         stream.Serialize(ref DPS);
         stream.Serialize(ref AttackRadius);
     }
+
+    public override string ToString() => $"{nameof(Speed)} : {Speed}, {nameof(DPS)} : {DPS}, {nameof(AttackRadius)} : {AttackRadius}";
 }

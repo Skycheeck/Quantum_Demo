@@ -22,6 +22,8 @@ public unsafe class PlayerProgressionSystem : SystemMainThread
             command.Execute(f, _playerCharacterProgression, runtimePlayer);
             bool syncResult = SyncModelToEntity(f, runtimePlayer.CharacterRef, runtimePlayer.PlayerModel.PlayerCharacterStats);
             if (!syncResult) Log.Error($"Failed to sync upgrade changes for player {i}!");
+
+            f.Events.PlayerModelUpdatedEvent(runtimePlayer.PlayerModel);
         }
     }
 
